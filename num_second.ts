@@ -22,18 +22,14 @@ enum FieldSize {
 }
 
 interface FieldProps {
-	type: string,
+	type: FieldTypes,
 	size: keyof typeof FieldSize,
 	theme: keyof typeof FieldTheme
 }
 
 function creatField(fieldProps: FieldProps) {
-	if (fieldProps.type in FieldTypes){
-		console.log(`тип ${fieldProps.type}, тема ${ fieldProps.theme}, размер ${fieldProps.size} `);
-	} else {
-		console.log("данные не правильные")
-	}
+	console.log(`тип ${fieldProps.type}, тема ${FieldTheme[fieldProps.theme]}, размер ${FieldSize[fieldProps.size]} `);
 }
 
-let objField: FieldProps = {type: "movie", size: "sm", theme: "sport"};
+let objField: FieldProps = {type: FieldTypes.video, size: "sm", theme: "sport"};
 creatField(objField);

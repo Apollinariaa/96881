@@ -7,7 +7,7 @@ interface InterfaceExampleOne {
 	d: any
 }
 
-interface InterfaceExampleTwo extends Omit<InterfaceExampleOne, "d"| "a">{
+interface InterfaceExampleTwo extends Omit<InterfaceExampleOne, "d" | "a">{
 	a: number,
 	b: number,
 	c: string | string[],
