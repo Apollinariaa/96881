@@ -1,3 +1,5 @@
+/*jshint esversion: 8 */
+
 interface InterfaceExampleOne {
 	a: string,
 	b: number,

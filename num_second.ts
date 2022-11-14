@@ -1,3 +1,11 @@
+/*jshint esversion: 8 */
+
+enum FieldTheme {
+	sport = "Sport",
+	theatre = "Theatre",
+	weather	= "Weather",
+	it = "IT"
+}
 
 enum FieldTypes {
 	music = "mp3",
@@ -6,12 +14,6 @@ enum FieldTypes {
 	text = "txt"
 }
 
-enum FieldTheme {
-	sport = "Sport",
-	theatre = "Theatre",
-	weather	= "Weather",
-	it = "IT"
-}
 
 enum FieldSize {
 	sm,
@@ -25,15 +27,13 @@ interface FieldProps {
 	theme: keyof typeof FieldTheme
 }
 
-
-
-function creatField(objField: FieldProps) {
-	if (objField.type in FieldTypes){
-		console.log(`тип ${objField.type}, тема ${ objField.theme}, размер ${objField.size} `);
+function creatField(fieldProps: FieldProps) {
+	if (fieldProps.type in FieldTypes){
+		console.log(`тип ${fieldProps.type}, тема ${ fieldProps.theme}, размер ${fieldProps.size} `);
 	} else {
 		console.log("данные не правильные")
 	}
 }
 
-let objField = {type: "movie",size: "sm", theme: "sport"};
+let objField: FieldProps = {type: "movie", size: "sm", theme: "sport"};
 creatField(objField);

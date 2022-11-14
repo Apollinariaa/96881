@@ -1,3 +1,5 @@
+/*jshint esversion: 8 */
+
 import {InterfaceExampleOne, InterfaceExampleTwo} from './num_first';
 
 interface PropertyObjectOne<P1> {
