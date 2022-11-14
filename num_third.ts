@@ -2,14 +2,14 @@
 
 import {InterfaceExampleOne, InterfaceExampleTwo} from './num_first';
 
-interface PropertyObjectOne<P1> {
-	p1: P1,
-	p2: P1
+interface PropertyObjectOne <T> {
+	p1: T,
+	p2: T
 }
 
-interface PropertyObjectTwo<P2> {
-	p1: P2,
-	p2: P2
+interface PropertyObjectTwo<K> {
+	p1: K,
+	p2: K
 }
 
 
